@@ -27,13 +27,13 @@ Por otro lado nos centraremos en los sistemas dinámicos que a diferencia de un 
 
 ![Este sistema lo elegi para representar un sistema dinámico donde el cuerpo del sujeto sobre la pieza que forma un vertice el cual es el que esta en contacto con la superficie horizontal tiende a realizar un movimiento angular dependiendo hacia donde incline el cuerpo el sujeto se analizaran las fuerzas que realice para modelar matemáticamente este movimiento](https://static.docsity.com/documents_first_pages/2020/06/19/c369206730af96a79ac5bd08b3fa0c0b.png?v=1652022148)
 
-Figura 1. Sistema dinámico #1
+Figura 3. Sistema dinámico #1
 
 💡**Ejemplo 2:**
 
 ![Popongo este otro ejemplo sencillo donde se aprecia una masa sobre una superficie inclinada, lo suficiente para suferar la fricción de la superficie y desarrollar un movimiento a favor de la gravedad](https://i.ytimg.com/vi/60tf50JImhU/maxresdefault.jpg)
 
-Figura 2. Sistema dinámico #2 
+Figura 4. Sistema dinámico #2 
 
 Los sistemas cuentan con 2 protagonistas los cuales definiremos de la siguiente manera:
 
@@ -59,7 +59,7 @@ Se hace necesario incluir operaciones que cuantifiquen el cambio de estas variab
 
 ![Esta grafíca que define la derivada me genera mayor comprensión ya que esta la descomposición en sus componentes rectangulares y las operaciones que se desarrollan para formular la pendiente](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Recta_tangente_y_derivada.svg/300px-Recta_tangente_y_derivada.svg.png)
 
-Figura 2. Gráfica de de definición de derivada y modelo algebraico #2 
+Figura 5. Gráfica de de definición de derivada y modelo algebraico #2 
 
 💡**Ejemplo 1:**
 
@@ -83,8 +83,12 @@ U=Entrada del sistema
 El resultado de un sistema no es un número es una función.
 
 ### 4.1 Características de una ecuación diferencial
+
 🔑 *Ecuación lineal:* Es una expresion matemática que establece una relación entre 2 variables de manera lineal, es decir, que su representación gráfica es una recta su forma de representación general es:
 
+$$\frac{d^{2}x(t)} {dt^{2}}+5*\frac{dx(t)}{dt}+10x(t)=0$$
+
+💡**Ejemplo :**
 
 $$ax+by=c$$
 
@@ -97,25 +101,47 @@ $$ax+b=0$$
 
 🔑 *Ecuación no lineal:* Una ecuación no lineal es una expresión matemática que involucra variables elevadas a potencias distintas de uno, o que incluye productos, raíces, o funciones no lineales.
 
+$$\frac{d^{2}x(t)} {dt^{2}}+ (x^{2}x(t)-1) \frac{dx(t)}{dt}+x(t)=0$$
+
+💡**Ejemplo :**
+
 $$x^{2}+y^{2}=r^{2}$$
 
-$$( \frac{d^{2}*x*(t)}{dt^2})+(5*()\frac{dx*(t)}{dt})+(10*x*(t))=0 $$
 🔑 *Ecuación Variante en el tiempo:* es una expresión matemática que describe un fenómeno que cambia a lo largo del tiempo.
+
+$$\frac{d^{2}x(t)} {dt^{2}}+5(1-cos(2t))x(t)=0$$
+
+💡**Ejemplo :**
 
 $$\frac{d^{2}x}{dt^{2}}=-g$$
 
 🔑 *Ecuación in-Variante en el tiempo:* es una expresión matemática que describe un sistema cuyo comportamiento o propiedades no cambian con el tiempo.
 
+$$\frac{d^{2}x(t)} {dt^{2}}+\frac{dx(t)}{dt}+x(t)+x^{3}(t)=sen(wt)$$
+
+💡**Ejemplo :**
+
 $$F=m*a$$
 
 🔑 *Superposición:* Se refiere a la propiedad que establece, que, si y_{1}(t) y y_{2}(t) son soluciones de una ecuación diferencial lineal homogénea, entonces cualquier combinación lineal de estas soluciones también es una solución de la misma ecuación. En otras palabras:
 
+💡**Ejemplo :**
+
 $$y(t)= C_{1}*y_{1}(t)$$
 
-## 5 MODELAMIENTO Y VALIDACIÓN
+## 5. Modelamiento y validación
 
-`Al aplicar leyes físicas a un modelo matemático de un sistema, se debetener encuentaq ue hay un nivelde incertidumbre en el resultado final, Es necesario validar el modelo con respecto al sistema físico comparandola salida del modelo con la salida de l modelo físico, sino es aceptablela diferenciase debe modificar el modelo hasta conseguir una diferencia aceptable.
-``
+Al aplicar leyes físicas a un modelo matemático de un sistema, se debe tener encuenta que hay un nivel de incertidumbre en el resultado final, Es necesario validar el modelo con respecto al sistema físico comparandola salida del modelo con la salida de l modelo físico, sino es aceptablela diferenciase debe modificar el modelo hasta conseguir una diferencia aceptable.
+
+### Influencia de parametros 
+
+La función que modela al sistema tiene una representación grafica que describe el comportamiento del sistema a traves del tiempo donde se analiza el desarrollo, esta representación nos dice el estado del sistema acontinuación se enfatizara en un sistema de resorte donde hay 2 parametros que rigen el comportamiento de este:
+
+![Esta grafíca muestra el comportamiento de un resorte que se estira y se retrae y por caracteristicas del material como forma y dureza este ciclo va cambiando la amplitud de la a medida que este pierde movimiento el cual es absorbido por el movimiento del material](https://lh3.googleusercontent.com/proxy/GrU77qN_uXeF_MMlaUZ7ESx2ndCwSDk97Lz3UMckbRSOmQSWJrl_NjwDYzv88zOIlj-7l8xfY1fCYK8QMIBHhXQ_qI65TdvFDiOzcKg)
+
+
+Figura 5. Gráfíca muestra el comportamiento de un resorte que se estira y se retrae y por caracteristicas del material como forma y dureza este ciclo va cambiando la amplitud de la a medida que este pierde movimiento el cual es absorbido por el movimiento del material, podemos apreciar como conclusión que tenemos un movimiento progresivo que tiene una representación sinusoidal ya que varia de forma análoga y un decaimiento exponencial por las perdidas energeticas de cada ciclo; finalmente en una gráfica se deducen ambos fenomenos según la información.
+
 # TRANSFORMADA DE LAPLACE
 Es una herramienta matemática que se utiliza para transformar funciones de tiempo en funciones de una variable compleja 𝑠.
 
@@ -132,12 +158,100 @@ donde:
 
 La transformada de Laplace permite simplificar el análisis de sistemas lineales, facilitando la resolución de ecuaciones diferenciales al convertirlas en ecuaciones algebraicas en el dominio de 𝑠.
 
-## 1. Propiedades de transformada de laPlace
+##  Propiedades de transformada de laPlace
 
-Linealidad:
+### Linealidad: 
+🔑 La linealidad de la transformada de Laplace es la propiedad que permite calcular la transformada de Laplace de cada término de una ecuación con varias funciones por separado, manteniendo las operaciones entre si.
 
-$$\mathscr{L}\{C_1f(t)+C_2g(t)}=C_1\mathscr{L}\{f(t)}+C_2\mathscr{g(t)} , C_1,C_2 \epsilon                  
-                          \mathbb{R} $$
+
+$$\mathscr{L}\{C_1f(t)+C_2g(t)}=C_1\mathscr{L}\{f(t)}+C_2\mathscr{g(t)} , C_1,C_2 \epsilon \mathbb{R} $$
+
+### Desplazamiento en "t":
+🔑 El desplazamiento en t se refiere a un cambio en la función original $f(t)$ en el dominio del tiempo. Específicamente, si tenemos una función $f(t)$, un desplazamiento en el tiempo   $t_{0}$.  se refiere a una versión de la función que ha sido desplazada o movida en el tiempo por un valor $t_{0}$.
+                          
+$$ si, g(t)=f(t-\tau)u(t-\tau),     entonces,    G(s)=e^{-st} F(s), \tau \geq 0$$
+
+### Desplazamiento en "s":
+🔑 El desplazamiento en s en la Transformada de Laplace se refiere a un cambio en la variable compleja s en el dominio de la Transformada de Laplace. Es un tipo de desplazamiento que ocurre en el dominio de frecuencia, y no en el dominio del tiempo.
+
+$$ si, g(t)=e^{-at}f(t),     entonces,    G(s)=F(s+a), a \geq 0$$
+
+### Escalado en "t":
+🔑 El escalado en t en la Transformada de Laplace se refiere a un cambio en la variable temporal de la función f(t) de modo que el tiempo se estira o se comprime. Este tipo de escalado tiene un efecto en el dominio de la Transformada de Laplace, que se refleja en el cambio en la variable ss.
+
+$$ si, g(t)=f(kt),     entonces,    G(s)=\frac{1}{k}  F(\frac{s}{k}) $$
+
+### Transformada de escalon unitario
+
+🔑 La Transformada de Laplace del escalón unitario es una función que se utiliza para modelar la activación de una señal a partir de un cierto instante de tiempo, generalmente $t=0$, o en general $t=t_0$​.
+
+La función escalón unitario, u(t), se define como:
+
+$u(t)={0 ,para,   t<0}$
+
+$u(t)={1 ,para,   t\geq 0}​$
+
+
+De manera generalizada, si el escalón unitario está desplazado en el tiempo por $t_0$​, se denota como $u(t−t_0​)$, y se define:
+
+$u(t−t_0)={0 ,para,   t<t_0}$
+
+$u(t−t_0​)={1 ,para, ​​  t\geq t_0}$​​
+
+![Esta grafíca muestra el comportamiento del escalon unitario vamos como cambia de forma inmediata el estado generando una onda cuadrada por el cambio instantaneo de estado en el sistema](https://herramientasdecalculo.com/wp-content/uploads/2019/08/figura-1.-funcic3b3n-impulso-unitario.jpg)
+
+Figura 6. Esta grafíca muestra el comportamiento del escalon unitario vamos como cambia de forma inmediata el estado generando una onda cuadrada por el cambio instantaneo de estado en el sistema
+
+### Transformada de función rampa
+
+🔑 La función rampa es una función que crece linealmente con el tiempo, es decir, la salida aumenta de manera proporcional al tiempo. Se puede definir como:
+
+$f(t)={0 ,para,   t<0}$
+
+$f(t)={At ,para,   t\geq 0}​$
+
+
+Es una función que comienza en $t=0$ y crece linealmente a partir de allí, alcanzando el valor $t$ en el tiempo $t$.
+
+
+$$\mathscr{L}\{At\}=\int_{0}^{\infty}Ate^{-st}dt=At\frac{e^{-st}}{-s}|_{0}^{\infty}-\int^{\infty}\frac{Ae^{-st}}{-s}dt$$
+
+$$=\frac{A}{s}\int_0^{\infty}e^{-st}dt=\frac{A}{s^{2}}$$
+
+
+
+![Esta grafíca muestra el comportamiento de la función rampa, se puede apreciar como aumenta su valor a través del tiempo y se genera una diagonal la cual si cambia de dirección ciclicamente estaría generando una onda triangular](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Funci%C3%B3n_Cu_rampa.svg/280px-Funci%C3%B3n_Cu_rampa.svg.png)
+
+Figura 7. Esta grafíca muestra el comportamiento de la función rampa, se puede apreciar como aumenta su valor a través del tiempo y se genera una diagonal la cual si cambia de dirección ciclicamente estaría generando una onda triangular.
+
+### Transformada de función sinusoidal
+🔑 La transformada de Laplace de una función sinusoidal $sin⁡(ω_0t)$ es un caso muy estándar en las tablas de transformadas, y su derivación es directa.
+
+$f(t)={0 ,para,   t<0}$
+
+$f(t)={Asen wt ,para,   t\geq 0}​$
+
+$$sen wt=\frac{1}{2j}(e^{jwt}-e^{-jwt})$$
+
+$$\mathscr{L}\{Asen wt}=\frac{1}{2j}\int_{0}^{\infty}(e^{jwt}-e^{-jwt})e^{-st}dt$$
+
+$$=\frac{A}{2j}\frac{1}{s-jw}-\frac{A}{2j}\frac{1}{s+jw}=\frac{Aw}{s^{2}+w^{2}}$$
+
+##Lista de Transformadas de LaPlace
+
+-Transformada de una función
+
+$$\mathscr{L}\{f(t)}=F(s)$$
+
+-Transformada de la derivada
+
+$$\mathscr{L}\{f'(t)}=sF(s)-f(0)$$ 
+
+$$\mathscr{L}\{f''(t)}=s^{2}F(s)-f(0)-f'(0)$$ 
+
+$$\mathscr{L}\{f^{n}(t)}=s^{n}F(s)-s^{n-1}f(0)-...-sf^{n-1}(0)-f^{n}(0)$$ 
+
+
 
 
 ## Referencias
